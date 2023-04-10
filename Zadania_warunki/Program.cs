@@ -6,7 +6,7 @@ namespace Zadania_warunki
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" Zdanie nr 1 ");
+            Console.WriteLine(" Zadanie nr 1 ");
 
             int a = 5;
             int b = 5;
@@ -45,7 +45,7 @@ namespace Zadania_warunki
                 Console.WriteLine($" {number} jest równa zero");
             }
 
-            Console.WriteLine("\n Zdanie nr 4 - Rok przestępny");
+            Console.WriteLine("\n Zadanie nr 4 - Rok przestępny");
             int year = 2016;
             if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
             {
@@ -177,7 +177,7 @@ namespace Zadania_warunki
             {
                 Console.WriteLine(" zaczyna byc słabo bo gorąco ");
             }
-            else if ( temp >=40 )
+            else // chyba wiadomo, ze pozostała temperatura tylko <= 40, myslałem aby zrobic else if 
             {
                 Console.WriteLine(" a weż wyprowadź się na Alaskę");
             }
