@@ -64,19 +64,19 @@ namespace Zadania_warunki
             {
                 Console.WriteLine(" Nie możesz ubiegać się o stanowisku W Rządzie.");
             }
-            else if ((wiek >= 21) && ( wiek < 25 ))
+            else if (wiek < 25)
             {
                 Console.WriteLine(" Możesz zostać posłem.");
             }
-            else if ((wiek >=25 ) && ( wiek < 30 ))
+            else if (wiek < 30)
             {
                 Console.WriteLine(" Możesz zostać posłem i premierem."); // nie wiem czy jest ustalony wiek na premiera :)
             }
-            else if( (wiek >= 30) && ( wiek <35 ))
+            else if( wiek < 35)
             {
                 Console.WriteLine(" Możesz zostać posłem, premierem i senatorem.");
             }
-            else if (wiek >= 35) // może wystarczyło by else?
+            else
             {
                 Console.WriteLine(" Możesz zostać posłem, premierem, senatorem, a nawet prezydentem.");
             }
@@ -84,19 +84,19 @@ namespace Zadania_warunki
             Console.WriteLine("\n Zdanie nr 6");
 
             int wzrost = 140;
-            if( wzrost < 140)
+            if( wzrost < 140 )
             {
                 Console.WriteLine("Jesteś liliputem");
             }
-            else if((wzrost >=140 ) && ( wzrost <=150 ))
+            else if( wzrost <= 150 )
             {
                 Console.WriteLine(" Jesteś krasnoludem.");
             }
-            else if(( wzrost > 150) &&  ( wzrost <= 170))
+            else if( wzrost <= 170 )
             {
                 Console.WriteLine(" Mogłbyś urosnąć jeszcze");
             }
-            else if(( wzrost > 170 ) &&  ( wzrost <= 190))
+            else if( wzrost <= 190 )
             {
                 Console.WriteLine(" Twój wzrost jest ok");
             }
@@ -138,7 +138,7 @@ namespace Zadania_warunki
             Console.Write($" Matematyka = {mat} pkt \n Fizyka = {fiz} pkt \n Chemia = {chem} pkt ");
             
             
-            if ((mat > 70) || (fiz >55 ) ||  (chem > 45)) // pryjąłem, że wynik z jednego  przedmiotu daje przepustkę, jakby miały być 3 razem użyłbym &&
+            if ((mat > 70) && (fiz >55 ) &&  (chem > 45)) // poprawiłęm i przyjąłem, że wynik z kazdego  przedmiotu daje przepustkę.
             {
                 Console.WriteLine("\n Kandydat dopuszczony do rekutacji ");
             }
@@ -161,23 +161,23 @@ namespace Zadania_warunki
             {
                 Console.WriteLine(" cholernie piździ ");
             }
-            else if((temp >= 0) && (temp < 10))
+            else if( temp < 10 )
             {
                 Console.WriteLine(" zimno ");
             }
-            else if ( (temp >= 10) && (temp < 20))
+            else if ( temp < 20 )
             {
                 Console.WriteLine(" chłodno ");
             }
-            else if ( (temp >=20 ) && ( temp < 30) )
+            else if ( temp < 30 )
             {
                 Console.WriteLine(" w sam raz ");
             }
-             else if ((temp >= 30) && (temp < 40))
+             else if ( temp < 40 )
             {
                 Console.WriteLine(" zaczyna byc słabo bo gorąco ");
             }
-            else // chyba wiadomo, ze pozostała temperatura tylko <= 40, myslałem aby zrobic else if 
+            else // chyba wiadomo, ze pozostała temperatura tylko >= 40, myslałem aby zrobic else if 
             {
                 Console.WriteLine(" a weż wyprowadź się na Alaskę");
             }
@@ -186,7 +186,7 @@ namespace Zadania_warunki
             int bokA = 40;
             int bokB = 55;
             int bokC = 65;
-            if ( ( bokA + bokB > bokC ) || ( bokA + bokC > bokB ) || ( bokB + bokC > bokA ) )  
+            if ( ( bokA + bokB > bokC ) && ( bokA + bokC > bokB ) && ( bokB + bokC > bokA ) )  
             {
                 Console.WriteLine(" Można zbudowac trójkąt ");
             }
@@ -238,6 +238,15 @@ namespace Zadania_warunki
                     break;
                 case 4:
                     Console.WriteLine(" Czwartek");
+                    break;
+                case 5:
+                    Console.WriteLine(" Piątek");
+                    break;
+                case 6:
+                    Console.WriteLine(" Sobota");
+                    break;
+                case 7:
+                    Console.WriteLine(" Niedziela");
                     break;
                 default:
                     Console.WriteLine("Błędny wybór");
